@@ -61,14 +61,14 @@ function App() {
     <>
      <div className={mode?Lightmode:Darkmode}>
       <Header/>
-      <div onClick={()=>{toggleMode()}}>
-        <hi>Change mode</hi>
+      <div className='parent-div' >
         <div className="form-check form-switch">
-          <input className="form-check-input " type="checkbox" value=""  switch/>
+          <input onClick={()=>{toggleMode()}} className="form-check-input " type="checkbox" value=""  switch/>
           <label className="form-check-label " for="checkNativeSwitch">
             {mode?"Light-Mode":"Dark-Mode"}
           </label>
       </div>
+        
       </div>
       <AddTodo addTodo={addTodo}/>
       <Todos todos={todos} onDelete={onDelete}/>
